@@ -44,6 +44,27 @@ OpenROAD-Flow-Scripts automates:
 - Verify outputs with **GUI screenshots, logs, and reports**.
 
 ---
+## Contents — Week 7
+
+- [Task 1: Installing & Setting up OpenROAD-Flow-Scripts (ORFS)](#task-1-installing--setting-up-openroad-flow-scripts-orfs)
+- [Task 2: Building OpenROAD](#task-2-building-openroad)
+- [Task 3: Verifying Installation](#task-3-verifying-installation)
+- [Task 4: ORFS Directory Structure Overview](#task-4-orfs-directory-structure-overview)
+- [Task 5: Adding VSDBabySoC Design to ORFS](#task-5-adding-vsdbabysoc-design-to-orfs)
+- [Task 6: Writing `config.mk` for VSDBabySoC](#task-6-writing-configmk-for-vsdbabysoc)
+- [Task 7: Running the Complete RTL → GDSII Flow](#task-7-running-the-complete-rtl--gdsii-flow)
+  - [7.1 Synthesis](#71-synthesis)
+  - [7.2 Floorplan](#72-floorplan)
+  - [7.3 Placement](#73-placement)
+  - [7.4 Clock Tree Synthesis (CTS)](#74-clock-tree-synthesis-cts)
+  - [7.5 Routing](#75-routing)
+- [Task 8: Final Outputs of Week-7](#task-8-final-outputs-of-week-7)
+- [Task 9: Key Learnings & Workflow Achievements](#task-9-key-learnings--workflow-achievements)
+- [Task 10: Special Thanks & References](#task-10-special-thanks--references)
+
+
+
+---
 
 # 🟩 **1. Installing & Setting up ORFS**
 
