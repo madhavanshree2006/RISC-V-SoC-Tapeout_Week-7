@@ -1,17 +1,47 @@
-# <h1 align="center">🟦 RISC-V SoC Tapeout Program — Week 7️⃣</h1>
-
-<p align="center"><img src="./ASSETS/0.png" width="500" alt="image 1"/></p>
-
+<h1 align="center">🟦 RISC-V SoC Tapeout Program — Week 7️⃣</h1>
+<p align="center"><img src="./ASSETS/0.png" width="500" alt="OpenROAD banner"/></p>
 
 ---
 
-# <h2 align="center">🚀 Week 7 — OpenROAD‐Flow‐Scripts Automation for VSDBabySoC</h2>
+<div align="center">
 
-In **Week 7**, I worked on setting up **OpenROAD-Flow-Scripts (ORFS)** and built an **end-to-end automated RTL-to-GDS flow** for the *VSDBabySoC*.
+# 🚀 Week 7 — End-to-End RTL-to-GDS Flow with OpenROAD
 
-This includes **installation**, **environment setup**, **design integration**, and **executing all stages** of the ASIC physical design flow.
+🌟 This is **Week 7** of the **VSD RISC-V SoC Tapeout Program** —
 
-This week marks a major step forward — automating the entire SoC flow using industry-style tools.
+I moved from **manual stage-wise physical design** to **full automation** using **OpenROAD-Flow-Scripts (ORFS)**.
+
+I successfully set up the **ORFS environment**, integrated the **VSDBabySoC design**,
+
+and executed **complete synthesis → floorplan → placement → CTS → routing → GDSII generation** flow.
+
+</div>
+
+---
+
+OpenROAD-Flow-Scripts automates:
+
+➡️ Logic synthesis (Yosys)
+
+➡️ Floorplanning (TritonTools)
+
+➡️ Placement & Global/Detailed Placement
+
+➡️ Clock-Tree Synthesis (CTS)
+
+➡️ Routing & DRC/LVS checks
+
+➡️ Final GDSII generation
+
+---
+
+## 🎯 Objectives — Week 7
+
+- Install and configure **OpenROAD-Flow-Scripts** on the local system.
+- Integrate **VSDBabySoC RTL + analog macros** into the flow.
+- Write a complete **`config.mk`** configuration for ORFS.
+- Execute the **full RTL-to-GDS physical design flow**.
+- Verify outputs with **GUI screenshots, logs, and reports**.
 
 ---
 
@@ -426,3 +456,61 @@ This week, I successfully:
 - Verified each stage with reports and GUI visualization
 
 This completes the **full physical design flow** for VSDBabySoC using **open-source ASIC tools**.
+---
+
+
+## 📒 Key Learnings — Week 7
+
+### 🛠️ Tools and Frameworks
+
+✔ **OpenROAD** → Complete physical design automation
+
+✔ **Yosys** → RTL synthesis integration
+
+✔ **OpenSTA** → Static timing analysis
+
+✔ **TritonTools** → Floorplan, placement, CTS, and routing
+
+✔ **Sky130 PDK** → Technology libraries for ASIC macros
+
+✔ **ORFS environment** → Standardized scripts for repeatable SoC flow
+
+---
+
+### 🔹 Workflow Achievements
+
+1. **Environment Setup & Verification**
+    - ORFS installation and dependency resolution.
+    - Built OpenROAD locally and verified binaries.
+    - Confirmed Yosys, OpenROAD, and TritonTools availability.
+2. **Design Integration**
+    - Added VSDBabySoC RTL (`vsdbabysoc.v`, `rvmyth.v`, `clk_gate.v`)
+    - Integrated analog macros (`avsddac`, `avsdpll`) with LEF/GDS/LIB.
+    - Configured floorplan (`pin_order.cfg`, `macro.cfg`) and timing (`vsdbabysoc_synthesis.sdc`).
+3. **Full Flow Execution**
+    - **Synthesis:** Generated gate-level netlist, timing reports, and cell usage statistics.
+    - **Floorplan:** Defined die/core dimensions, pin placement, and macro layout.
+    - **Placement:** Performed global and detailed placement; analyzed congestion, IR drop, and density.
+    - **Clock-Tree Synthesis:** Balanced clock network with buffer insertion and skew optimization.
+    - **Routing:** Global and detailed routing; ensured DRC-clean nets.
+    - **Final GDSII:** Complete physical layout ready for tapeout.
+  
+  ---
+
+> 💡 “Week 7 was the culmination of our physical design journey — automating the full SoC flow and generating a tapeout-ready layout for VSDBabySoC using open-source ASIC tools.” 🚀
+
+----
+
+
+## 🙏 Special Thanks 👏  
+I sincerely thank all the organizations and their key members for making this program possible 💡:  
+
+- 🧑‍🏫 **VLSI System Design (VSD)** – [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/) for mentorship and vision.  
+- 🤝 **Efabless** – [Michael Wishart](https://www.linkedin.com/in/mike-wishart-81480612/) & [Mohamed Kassem](https://www.linkedin.com/in/mkkassem/) for enabling collaborative open-source chip design.  
+- 🏭 **[Semiconductor Laboratory (SCL)](https://www.scl.gov.in/)** – for PDK & foundry support.  
+- 🎓 **[IIT Gandhinagar (IITGN)](https://www.linkedin.com/school/indian-institute-of-technology-gandhinagar-iitgn-/?originalSubdomain=in)** – for on-site training & project facilitation.  
+- 🛠️ **Synopsys** – [Sassine Ghazi](https://www.linkedin.com/in/sassine-ghazi/) for providing industry-grade EDA tools under C2S program.  
+
+--- 
+👉 Main Repo Link :  
+[https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program](https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program)
